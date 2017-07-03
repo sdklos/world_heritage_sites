@@ -10,6 +10,7 @@ How to Build a CLI Gem
 8. program
 
 - A command line interface for world heritage sites
+./bin/world-heritage-sites to execute
 
 user types what kind of list they want
 user selects item from list for more information about list item

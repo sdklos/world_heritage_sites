@@ -1,8 +1,10 @@
+# Our CLI Controller
+
 require 'open-uri'
 require 'pry'
 require 'nokogiri'
 
-class CommandLineInterface
+class WorldHeritageSites::CLI
 
   def call
     input = ""

@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-puts "Hello World"
+require './lib/world_heritage_sites'
+
+WorldHeritageSites::CLI.new.call
