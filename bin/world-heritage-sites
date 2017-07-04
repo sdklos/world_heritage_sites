@@ -3,3 +3,9 @@
 require './lib/world_heritage_sites'
 
 WorldHeritageSites::CLI.new.call
+
+#WorldHeritageSites::Country.scrape_countries
+
+#WorldHeritageSites::Country.all
+
+#WorldHeritageSites::CulturalSite.scrape_cultural_sites
