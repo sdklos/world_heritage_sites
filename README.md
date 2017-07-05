@@ -1,8 +1,6 @@
 # WorldHeritageSites
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/world_heritage_sites`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem allows you to view a list of UNESCO World Heritage Sites by category (cultural, natural, and mixed) and then select a site from the list to view more information about it.
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+execute ./bin/world-heritage-sites to begin the CLI program, then follow prompts.
 
 ## Development
 

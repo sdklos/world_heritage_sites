@@ -1,3 +1,5 @@
+#this is an idea i gave up on but could try to implement again at a later date
+
 require 'open-uri'
 require 'pry'
 require 'nokogiri'

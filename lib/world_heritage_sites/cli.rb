@@ -44,12 +44,10 @@ class WorldHeritageSites::CLI
     name = boxes.css("div.list_site.box li a").text
     puts "Which site would you like to learn more about? (enter site name)"
     input = gets.strip
-    if site.detect {|content| input.downcase == content.text.downcase} != nil
+    if site.detect {|content| content.text.downcase.include?(input.downcase)}
       url = ""
       result = []
-      result = site.detect do |content|
-        input.downcase == content.text.downcase
-      end
+      result = site.detect {|content| content.text.downcase.include?(input.downcase)}
       url = "http://whc.unesco.org#{result.attribute('href').value}"
       description = Nokogiri::HTML(open(url))
       synopsis = description.css("div.ym-gbox-left.readable div.box")
@@ -76,12 +74,10 @@ class WorldHeritageSites::CLI
     name = boxes.css("div.list_site.box li a").text
     puts "Which site would you like to learn more about? (enter site name)"
     input = gets.strip
-    if site.detect {|content| input.downcase == content.text.downcase} != nil
+    if site.detect {|content| content.text.downcase.include?(input.downcase)}
       url = ""
       result = []
-      result = site.detect do |content|
-        input.downcase == content.text.downcase
-      end
+      result = site.detect {|content| content.text.downcase.include?(input.downcase)}
       url = "http://whc.unesco.org#{result.attribute('href').value}"
       description = Nokogiri::HTML(open(url))
       synopsis = description.css("div.ym-gbox-left.readable div.box")
@@ -108,12 +104,10 @@ class WorldHeritageSites::CLI
     name = boxes.css("div.list_site.box li a").text
     puts "Which site would you like to learn more about? (enter site name)"
     input = gets.strip
-    if site.detect {|content| input.downcase == content.text.downcase} != nil
+    if site.detect {|content| content.text.downcase.include?(input.downcase)}
       url = ""
       result = []
-      result = site.detect do |content|
-        input.downcase == content.text.downcase
-      end
+      result = site.detect {|content| content.text.downcase.include?(input.downcase)}
       url = "http://whc.unesco.org#{result.attribute('href').value}"
       description = Nokogiri::HTML(open(url))
       synopsis = description.css("div.ym-gbox-left.readable div.box")
