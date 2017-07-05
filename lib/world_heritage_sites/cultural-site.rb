@@ -19,9 +19,5 @@ class WorldHeritageSites::CulturalSite
     @@all.delete_if { |element| element == ""}
 
     @@all
-  ende
-
-  def self.all
-    @@all
   end
 end

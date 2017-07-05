@@ -20,8 +20,4 @@ class WorldHeritageSites::NaturalSite
 
     @@all
   end
-
-  def self.all
-    @@all
-  end
 end
