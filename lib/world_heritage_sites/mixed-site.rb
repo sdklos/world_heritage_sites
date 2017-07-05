@@ -2,14 +2,14 @@ require 'open-uri'
 require 'pry'
 require 'nokogiri'
 
-class WorldHeritageSites::NaturalSite
+class WorldHeritageSites::MixedSite
   attr_accessor :name
   @@all = []
 
-  def self.scrape_natural_sites
-    doc = Nokogiri::HTML(open('http://whc.unesco.org/en/list/?order=property&type=natural'))
+  def self.scrape_mixed_sites
+    doc = Nokogiri::HTML(open('http://whc.unesco.org/en/list/?order=property&type=mixed'))
       doc.css("div.content").each do |boxes|
-        boxes.css("div.list_site.box li.natural a").each do |site|
+        boxes.css("div.list_site.box li.mixed a").each do |site|
           @@all << site.text
         end
       end

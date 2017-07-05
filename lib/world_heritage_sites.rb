@@ -3,6 +3,7 @@ require_relative './world_heritage_sites/cli'
 require_relative './world_heritage_sites/country'
 require_relative './world_heritage_sites/cultural-site'
 require_relative './world_heritage_sites/natural-site'
+require_relative './world_heritage_sites/mixed-site'
 
 # require 'open-uri'
 # require 'pry'

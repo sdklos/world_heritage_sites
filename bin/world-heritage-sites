@@ -2,9 +2,9 @@
 
 require './lib/world_heritage_sites'
 
-WorldHeritageSites::CLI.new.call
+#WorldHeritageSites::CLI.new.call
 
-#WorldHeritageSites::Country.scrape_countries
+WorldHeritageSites::Country.new.scrape_country
 
 #WorldHeritageSites::Country.all
 

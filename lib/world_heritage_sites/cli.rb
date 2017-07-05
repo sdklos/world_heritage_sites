@@ -12,7 +12,8 @@ class WorldHeritageSites::CLI
       puts "Welcome to the World Heritage Sites Database"
       puts "To get a list of countries enter 'list countries'."
       puts "To get a list of cultural sites enter 'list cultural sites'"
-      puts "To get a list of natural sites enter 'natural sites'"
+      puts "To get a list of natural sites enter 'list natural sites'"
+      puts "To get a list of mixed natural and cultural sites enter 'list mixed sites'"
       puts "To quit, type 'exit'"
       puts "What would you like to do?"
       input = gets.strip
@@ -31,8 +32,10 @@ class WorldHeritageSites::CLI
         #or just sites_list_menu?
       when "list natural sites"
         list_natural_sites
-        natural_sites_list_menu
+        #natural_sites_list_menu
         #or just sites_list_menu?
+      when "list mixed sites"
+        list_mixed_sites
       end
     end
   end
@@ -46,7 +49,7 @@ class WorldHeritageSites::CLI
   #   end
   # #s  binding.pry
   # end
-  
+
   def list_countries
     WorldHeritageSites::Country.scrape_countries.each.with_index(1) do |country, index|
       puts "#{index}. #{country}"
@@ -54,7 +57,12 @@ class WorldHeritageSites::CLI
   end
 
   def countries_list_menu
-
+    # list = WorldHeritageSites::Country.scrape_countries
+    #    puts "Which country's sites would you like to view? (enter country's list number)"
+    #    input = gets.strip
+    #    if input.to_i.between?(1,list.size)
+    #       list[input.to_i-1]
+      # end
   end
 
   # def sites_list_menu
@@ -72,11 +80,19 @@ class WorldHeritageSites::CLI
   end
 
   def list_natural_sites
-
+    WorldHeritageSites::NaturalSite.scrape_natural_sites.each.with_index(1) do |site, index|
+      puts "#{index}. #{site}"
+    end
   end
 
   def natural_sites_list_menu
 
+  end
+
+  def list_mixed_sites
+    WorldHeritageSites::MixedSite.scrape_mixed_sites.each.with_index(1) do |site, index|
+      puts "#{index}. #{site}"
+    end
   end
 
 
