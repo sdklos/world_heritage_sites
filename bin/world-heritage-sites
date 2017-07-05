@@ -2,10 +2,12 @@
 
 require './lib/world_heritage_sites'
 
-#WorldHeritageSites::CLI.new.call
+WorldHeritageSites::CLI.new.call
 
-WorldHeritageSites::Country.new.scrape_country
+#WorldHeritageSites::Country.new.scrape_country
 
 #WorldHeritageSites::Country.all
 
 #WorldHeritageSites::CulturalSite.scrape_cultural_sites
+
+#WorldHeritageSites::CLI.new.cultural_sites_list_menu
